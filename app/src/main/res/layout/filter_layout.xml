@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/bedroom_type_main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/no_of_bedrooms"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/avenir_next_bold"
+            android:text="No of Bedrooms" />
+
+        <LinearLayout
+            android:id="@+id/first_row_bedroom_type"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_below="@id/no_of_bedrooms"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/rk_1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/background_color"
+                android:fontFamily="@font/avenir_next_bold"
+                android:gravity="center"
+                android:text="1 RK" />
+
+            <TextView
+                android:id="@+id/bhk_1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="@color/background_color"
+                android:fontFamily="@font/avenir_next_bold"
+                android:gravity="center"
+                android:text="1 BHK" />
+
+            <TextView
+                android:id="@+id/bhk_2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/background_color"
+                android:fontFamily="@font/avenir_next_bold"
+                android:gravity="center"
+                android:text="2 BHK" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/second_row_bedroom_type"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_below="@id/first_row_bedroom_type"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/bhk_3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/background_color"
+                android:fontFamily="@font/avenir_next_bold"
+                android:gravity="center"
+                android:text="3 BHK" />
+
+            <TextView
+                android:id="@+id/bhk_4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="@color/background_color"
+                android:fontFamily="@font/avenir_next_bold"
+                android:gravity="center"
+                android:text="4 BHK" />
+
+            <TextView
+                android:id="@+id/bhk_4_more"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/background_color"
+                android:fontFamily="@font/avenir_next_bold"
+                android:gravity="center"
+                android:text="4+ BHK" />
+        </LinearLayout>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/property_type_main_layout"
+        android:layout_below="@id/bedroom_type_main_layout"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+        <TextView
+            android:id="@+id/text_property_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/avenir_next_bold"
+            android:text="Property Type" />
+        <TextView
+            android:id="@+id/apartment"
+            android:layout_below="@id/text_property_type"
+            android:text="Apartment"
+            android:gravity="center"
+            android:paddingStart="28dp"
+            android:paddingLeft="28dp"
+            android:paddingRight="28dp"
+            android:paddingEnd="28dp"
+            android:background="@color/background_color"
+            android:fontFamily="@font/avenir_next_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp" />
+        <TextView
+            android:id="@+id/ih_villa"
+            android:text="Independent House/Villa"
+            android:gravity="center"
+            android:layout_below="@id/text_property_type"
+            android:layout_toRightOf="@id/apartment"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@id/apartment"
+            android:fontFamily="@font/avenir_next_bold"
+            android:background="@color/background_color"
+            android:layout_width="match_parent"
+            android:layout_height="30dp" />
+        <TextView
+            android:id="@+id/if_bf"
+            android:layout_below="@id/apartment"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:background="@color/background_color"
+            android:text="Independent Floor/Builder Floor"
+            android:fontFamily="@font/avenir_next_bold"
+            android:layout_width="match_parent"
+            android:layout_height="30dp" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/furnishing_type_main_layout"
+        android:layout_below="@id/property_type_main_layout"
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/text_furnishing_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/avenir_next_bold"
+            android:text="Furnished" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_below="@id/text_furnishing_type"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/fully_furnished"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/background_color"
+                android:fontFamily="@font/avenir_next_bold"
+                android:gravity="center"
+                android:text="Full" />
+
+            <TextView
+                android:id="@+id/semi_furnished"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="@color/background_color"
+                android:fontFamily="@font/avenir_next_bold"
+                android:gravity="center"
+                android:text="Semi" />
+
+            <TextView
+                android:id="@+id/not_furnished"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/background_color"
+                android:fontFamily="@font/avenir_next_bold"
+                android:gravity="center"
+                android:text="None" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/apply_filter"
+        android:layout_alignParentBottom="true"
+        android:text="Apply Filters"
+        android:gravity="center"
+        android:padding="12dp"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:background="@drawable/ripple_effect_for_apply_filter_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</RelativeLayout>

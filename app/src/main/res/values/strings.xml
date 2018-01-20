@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">NoBroker</string>
+    <string name="text_no_internet_connection">No internet connection</string>
+    <string name="text_whoops">Whoops!</string>
+    <string name="text_no_internet_connection_found_check_your_connection_or_try_again">No internet connection found. Check\nyour connection or try again</string>
+
+</resources>
