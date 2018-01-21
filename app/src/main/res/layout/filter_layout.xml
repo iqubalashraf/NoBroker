@@ -2,6 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
     <RelativeLayout
         android:id="@+id/action_bar_custom"
         android:layout_width="match_parent"
@@ -32,12 +33,13 @@
             android:textColor="@color/white"
             android:textSize="16dp" />
     </RelativeLayout>
+
     <RelativeLayout
         android:id="@+id/bedroom_type_main_layout"
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_below="@id/action_bar_custom"
         android:layout_marginTop="10dp"
-        android:layout_height="wrap_content"
         android:padding="10dp">
 
         <TextView
@@ -61,9 +63,9 @@
                 android:layout_weight="1"
                 android:background="@color/background_color"
                 android:fontFamily="@font/avenir_next_bold"
-                android:textColor="@color/black"
                 android:gravity="center"
-                android:text="1 RK" />
+                android:text="1 RK"
+                android:textColor="@color/black" />
 
             <TextView
                 android:id="@+id/bhk_1"
@@ -72,11 +74,11 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
-                android:textColor="@color/black"
                 android:background="@color/background_color"
                 android:fontFamily="@font/avenir_next_bold"
                 android:gravity="center"
-                android:text="1 BHK" />
+                android:text="1 BHK"
+                android:textColor="@color/black" />
 
             <TextView
                 android:id="@+id/bhk_2"
@@ -84,10 +86,10 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="@color/background_color"
-                android:textColor="@color/black"
                 android:fontFamily="@font/avenir_next_bold"
                 android:gravity="center"
-                android:text="2 BHK" />
+                android:text="2 BHK"
+                android:textColor="@color/black" />
         </LinearLayout>
 
         <LinearLayout
@@ -103,103 +105,112 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:textColor="@color/black"
                 android:background="@color/background_color"
                 android:fontFamily="@font/avenir_next_bold"
                 android:gravity="center"
-                android:text="3 BHK" />
+                android:text="3 BHK"
+                android:textColor="@color/black" />
 
             <TextView
                 android:id="@+id/bhk_4"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="10dp"
-                android:textColor="@color/black"
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
                 android:background="@color/background_color"
                 android:fontFamily="@font/avenir_next_bold"
                 android:gravity="center"
-                android:text="4 BHK" />
+                android:text="4 BHK"
+                android:textColor="@color/black" />
 
             <TextView
                 android:id="@+id/bhk_4_more"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:textColor="@color/black"
+                android:visibility="gone"
                 android:background="@color/background_color"
                 android:fontFamily="@font/avenir_next_bold"
                 android:gravity="center"
-                android:text="4+ BHK" />
+                android:text="4+ BHK"
+                android:textColor="@color/black" />
         </LinearLayout>
     </RelativeLayout>
+
     <RelativeLayout
         android:id="@+id/property_type_main_layout"
-        android:layout_below="@id/bedroom_type_main_layout"
-        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@id/bedroom_type_main_layout"
+        android:layout_marginTop="10dp"
         android:padding="10dp">
+
         <TextView
             android:id="@+id/text_property_type"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/avenir_next_bold"
             android:text="Property Type" />
+
         <TextView
             android:id="@+id/apartment"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
             android:layout_below="@id/text_property_type"
-            android:text="Apartment"
+            android:background="@color/background_color"
+            android:fontFamily="@font/avenir_next_bold"
             android:gravity="center"
-            android:paddingStart="28dp"
+            android:paddingEnd="28dp"
             android:paddingLeft="28dp"
             android:paddingRight="28dp"
-            android:paddingEnd="28dp"
-            android:background="@color/background_color"
-            android:textColor="@color/black"
-            android:fontFamily="@font/avenir_next_bold"
-            android:layout_width="wrap_content"
-            android:layout_height="30dp" />
+            android:paddingStart="28dp"
+            android:text="Apartment"
+            android:textColor="@color/black" />
+
         <TextView
             android:id="@+id/ih_villa"
-            android:text="Independent House/Villa"
-            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
             android:layout_below="@id/text_property_type"
-            android:layout_toRightOf="@id/apartment"
             android:layout_marginLeft="10dp"
             android:layout_marginStart="10dp"
-            android:textColor="@color/black"
             android:layout_toEndOf="@id/apartment"
-            android:fontFamily="@font/avenir_next_bold"
+            android:layout_toRightOf="@id/apartment"
             android:background="@color/background_color"
-            android:layout_width="match_parent"
-            android:layout_height="30dp" />
+            android:fontFamily="@font/avenir_next_bold"
+            android:gravity="center"
+            android:text="Independent House/Villa"
+            android:textColor="@color/black" />
+
         <TextView
             android:id="@+id/if_bf"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
             android:layout_below="@id/apartment"
             android:layout_marginTop="10dp"
-            android:textColor="@color/black"
-            android:gravity="center"
             android:background="@color/background_color"
-            android:text="Independent Floor/Builder Floor"
             android:fontFamily="@font/avenir_next_bold"
-            android:layout_width="match_parent"
-            android:layout_height="30dp" />
+            android:gravity="center"
+            android:text="Independent Floor/Builder Floor"
+            android:textColor="@color/black" />
     </RelativeLayout>
+
     <RelativeLayout
         android:id="@+id/furnishing_type_main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_below="@id/property_type_main_layout"
         android:layout_marginTop="10dp"
-        android:padding="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:padding="10dp">
+
         <TextView
             android:id="@+id/text_furnishing_type"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/avenir_next_bold"
             android:text="Furnished" />
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="30dp"
@@ -212,10 +223,10 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="@color/background_color"
-                android:textColor="@color/black"
                 android:fontFamily="@font/avenir_next_bold"
                 android:gravity="center"
-                android:text="Full" />
+                android:text="Full"
+                android:textColor="@color/black" />
 
             <TextView
                 android:id="@+id/semi_furnished"
@@ -224,34 +235,34 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
-                android:textColor="@color/black"
                 android:background="@color/background_color"
                 android:fontFamily="@font/avenir_next_bold"
                 android:gravity="center"
-                android:text="Semi" />
+                android:text="Semi"
+                android:textColor="@color/black" />
 
             <TextView
                 android:id="@+id/not_furnished"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:textColor="@color/black"
                 android:layout_weight="1"
                 android:background="@color/background_color"
                 android:fontFamily="@font/avenir_next_bold"
                 android:gravity="center"
-                android:text="None" />
+                android:text="None"
+                android:textColor="@color/black" />
         </LinearLayout>
     </RelativeLayout>
 
     <TextView
         android:id="@+id/apply_filter"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
         android:layout_alignParentBottom="true"
-        android:text="Apply Filters"
+        android:background="@drawable/ripple_effect_for_apply_filter_button"
         android:gravity="center"
         android:padding="12dp"
+        android:text="Apply Filters"
         android:textColor="@color/white"
-        android:textSize="16sp"
-        android:background="@drawable/ripple_effect_for_apply_filter_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:textSize="16sp" />
 </RelativeLayout>

@@ -165,6 +165,7 @@ public class MainActivity extends AppCompatActivity
                     endlessRecyclerOnScrollListener.setPreviousTotal(getFilteredData(data).size());
                 }
                 updateRecyclerView(data);
+                showMainLayout();
                 break;
             case R.id.rk_1:
                 toggleView(rk_1);
@@ -247,7 +248,7 @@ public class MainActivity extends AppCompatActivity
                             PayloadMainApi payloadMainApi = new Gson().fromJson(response, PayloadMainApi.class);
                             data.addAll(payloadMainApi.getData());
                             if(isFilterApplied()){
-                                if(stopCall<2){
+                                if(stopCall<5){
                                     if (getFilteredData(payloadMainApi.getData()).size() ==0){
                                         int temp =endlessRecyclerOnScrollListener.getCurrent_page() + 1;
                                         fetchData(temp+"");
@@ -281,7 +282,6 @@ public class MainActivity extends AppCompatActivity
     }
 
     private void updateRecyclerView(List<Data> data){
-        showMainLayout();
         List<Data> temp = new ArrayList<>();
         mainAdapter.setData(temp);
         mainAdapter.notifyDataSetChanged();

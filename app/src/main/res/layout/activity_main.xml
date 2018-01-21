@@ -1,21 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tool="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tool:context=".MainActivity">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
         <RelativeLayout
             android:id="@+id/action_bar_custom"
             android:layout_width="match_parent"
             android:layout_height="56dp"
             android:background="@color/brand_color"
-            app:layout_scrollFlags="scroll|enterAlways"
-            android:gravity="center_horizontal">
+            android:gravity="center_horizontal"
+            app:layout_scrollFlags="scroll|enterAlways">
 
             <ImageView
                 android:id="@+id/app_logo"
@@ -47,22 +48,17 @@
         android:id="@+id/recycler_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior"
-        android:layout_below="@id/action_bar_custom"
+        android:layout_marginBottom="50dp"
         android:background="@color/background_color"
-        android:visibility="visible" />
+        android:visibility="visible"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
 
     <RelativeLayout
         android:id="@+id/layout_filter_button"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
+        android:layout_height="50dp"
         android:layout_gravity="bottom"
-        android:background="@drawable/ripple_for_notify_me_button"
-        android:paddingBottom="10dp"
-        android:paddingEnd="10dp"
-        android:paddingStart="10dp"
-        android:paddingTop="10dp">
+        android:background="@drawable/ripple_for_notify_me_button">
 
         <TextView
             android:id="@+id/filter_button"
@@ -81,7 +77,6 @@
         layout="@layout/no_internet_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/action_bar_custom"
         android:visibility="gone" />
 
     <include
@@ -89,6 +84,5 @@
         layout="@layout/filter_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/action_bar_custom"
         android:visibility="gone" />
 </android.support.design.widget.CoordinatorLayout>
