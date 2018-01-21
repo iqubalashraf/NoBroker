@@ -1,8 +1,15 @@
 package app.nobroker;
 
+import android.app.Activity;
+import android.content.DialogInterface;
 import android.content.res.Resources;
+import android.graphics.Color;
+import android.os.Build;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Toast;
 
+import android.app.AlertDialog;
 import java.text.NumberFormat;
 import java.util.Locale;
 
@@ -17,6 +24,8 @@ public class GeneralUtil {
     public static final String IMAGE_BASE_URL = "http://d3snwcirvb4r88.cloudfront.net/images/";
     public static final String KEY_SEMI_FURNISHED = "SEMI_FURNISHED", KEY_FULLY_FURNISHED = "FULLY_FURNISHED", KEY_NOT_FURNISHED = "NOT_FURNISHED";
     public static final String KEY_FAMILY = "FAMILY", KEY_ANYONE = "ANYONE", KEY_BACHELOR = "BACHELOR";
+    public static final String KEY_RK1 = "RK1", KEY_BHK1 = "BHK1", KEY_BHK2 = "BHK2", KEY_BHK3 = "BHK3", KEY_BHK4 = "BHK4", KEY_BHK4_MORE = "BHK4MORE";
+    public static final String KEY_APARTMENT = "AP", KEY_IH_VILLA = "IH", KEY_IF = "IF";
 
     public static boolean checkConnection() {
         boolean isConnected = ConnectivityReceiver.isConnected();
@@ -79,6 +88,39 @@ public class GeneralUtil {
             }
         }else {
             return "";
+        }
+    }
+
+    public static void showExitConformationDialog(final Activity activity) {
+        final AlertDialog.Builder dialog = new AlertDialog.Builder(activity);
+        dialog.setTitle("Exit App?");
+        dialog.setCancelable(true);
+        dialog.setPositiveButton("Exit", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface paramDialogInterface, int paramInt) {
+                // TODO Auto-generated method stub
+                activity.finish();
+            }
+        });
+        dialog.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+            }
+        });
+        dialog.show();
+    }
+
+    public static boolean isBothTrue(boolean value1, boolean value2){  // Returns true only when both value are true.
+        if(value1)
+            if (value2)
+                return true;
+        return false;
+    }
+    public static void updateStatusBarColor(Activity activity, String color) {// Color must be in hexadecimal fromat
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            Window window = activity.getWindow();
+            window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+            window.setStatusBarColor(Color.parseColor(color));
         }
     }
 }

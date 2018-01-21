@@ -1,48 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingRight="68dp"
-    android:paddingLeft="68dp"
-    android:background="#E9EBEE"
-    android:layout_centerInParent="true"
-    android:gravity="center">
-    <TextView
-        android:id="@+id/text_whoops"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:textSize="14sp"
-        android:textColor="@color/text_color"
-        android:layout_marginTop="10dp"
-        android:fontFamily="@font/avenir_next_demi_bold"
-        android:layout_centerHorizontal="true"
-        android:text="@string/text_whoops"/>
-    <TextView
-        android:id="@+id/text_no_internet_connection"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/action_bar_custom"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/brand_color"
+        android:gravity="center_horizontal">
+
+        <ImageView
+            android:id="@+id/app_logo"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:src="@mipmap/ic_launcher_round" />
+
+        <TextView
+            android:id="@+id/app_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@id/app_logo"
+            android:layout_toRightOf="@id/app_logo"
+            android:fontFamily="@font/avenir_next_bold"
+            android:gravity="center"
+            android:text="@string/app_name"
+            android:textColor="@color/white"
+            android:textSize="16dp" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_below="@id/action_bar_custom"
+        android:layout_width="match_parent"
+        android:paddingRight="68dp"
+        android:paddingLeft="68dp"
+        android:background="#E9EBEE"
+        android:layout_centerInParent="true"
         android:gravity="center"
-        android:textSize="12sp"
-        android:fontFamily="@font/avenir_next_regular"
-        android:textColor="@color/text_color"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/text_whoops"
-        android:text="@string/text_no_internet_connection_found_check_your_connection_or_try_again"/>
-    <TextView
-        android:id="@+id/button_try_again"
-        android:layout_width="100dp"
-        android:layout_marginTop="15dp"
-        android:layout_height="32dp"
-        android:layout_centerHorizontal="true"
-        android:clickable="true"
-        android:gravity="center"
-        android:fontFamily="@font/avenir_next_demi_bold"
-        android:layout_below="@id/text_no_internet_connection"
-        android:background="@drawable/ripple_for_notify_me_button"
-        android:elevation="5dp"
-        android:textColor="@color/brand_color"
-        android:textSize="13sp"
-        android:text="Try Again"/>
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/text_whoops"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="14sp"
+            android:textColor="@color/text_color"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/avenir_next_demi_bold"
+            android:layout_centerHorizontal="true"
+            android:text="@string/text_whoops"/>
+        <TextView
+            android:id="@+id/text_no_internet_connection"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="12sp"
+            android:fontFamily="@font/avenir_next_regular"
+            android:textColor="@color/text_color"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/text_whoops"
+            android:text="@string/text_no_internet_connection_found_check_your_connection_or_try_again"/>
+        <TextView
+            android:id="@+id/button_try_again"
+            android:layout_width="100dp"
+            android:layout_marginTop="15dp"
+            android:layout_height="32dp"
+            android:layout_centerHorizontal="true"
+            android:clickable="true"
+            android:gravity="center"
+            android:fontFamily="@font/avenir_next_demi_bold"
+            android:layout_below="@id/text_no_internet_connection"
+            android:background="@drawable/ripple_for_notify_me_button"
+            android:elevation="5dp"
+            android:textColor="@color/brand_color"
+            android:textSize="13sp"
+            android:text="Try Again"/>
+    </RelativeLayout>
+
 </RelativeLayout>
